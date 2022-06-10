@@ -6,7 +6,7 @@ use VendingMachine\Exception\ItemNotFoundException;
 
 class ItemCollection implements ItemCollectionInterface
 {
-    private $products = array();
+    public $products = array();
 
     public function add(ItemInterface $item): void
     {

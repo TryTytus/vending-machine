@@ -17,6 +17,7 @@ class MoneyCollection implements MoneyCollectionInterface {
 
     public function sum(): float
     {
+        if (!count($this->values)) return 0.0;
         return array_reduce($this->values, function($x, $y) {
             $x += $y->getValue();
             return $x;
