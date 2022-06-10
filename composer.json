@@ -1,4 +1,7 @@
 {
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests"
+    },
     "autoload": {
         "psr-4": {
             "VendingMachine\\": "src"
