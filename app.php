@@ -17,7 +17,7 @@ foreach ([
     'B' => 1.0,
     'C' => 1.5
     ] as $name => $price) {
-    $vm->addItem(new Item(0.65, 1, new ItemCode($name)));
+    $vm->addItem(new Item($price, 1, new ItemCode($name)));
 }
 
 while (true) {

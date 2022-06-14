@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "run": "php app.php",
         "test": "./vendor/bin/phpunit tests"
     },
     "autoload": {
