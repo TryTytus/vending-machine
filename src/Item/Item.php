@@ -7,7 +7,7 @@ use VendingMachine\Item\ItemInterface;
 class Item implements ItemInterface {
     
     private float $price;
-    private int $count;
+    public int $count;
     private ItemCode $code;
 
     public function __construct(float $price, int $count, ItemCode $code)

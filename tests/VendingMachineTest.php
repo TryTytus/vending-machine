@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
+
 use VendingMachine\Item\Item;
 use VendingMachine\Item\ItemCode;
 use VendingMachine\Money\Money;

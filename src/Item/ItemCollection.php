@@ -20,7 +20,7 @@ class ItemCollection implements ItemCollectionInterface
                 return $product;
             }
         }
-        return new ItemNotFoundException();
+        throw new ItemNotFoundException();
     }
 
     public function count(ItemCodeInterface $itemCode): int

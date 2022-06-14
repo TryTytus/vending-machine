@@ -2,7 +2,6 @@
 
 namespace VendingMachine\Money;
 
-use VendingMachine\Money\MoneyClass;
 use VendingMachine\Money\MoneyCollectionInterface;
 use VendingMachine\Money\MoneyInterface;
 

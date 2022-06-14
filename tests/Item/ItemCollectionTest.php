@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
+use VendingMachine\Exception\ItemNotFoundException;
 use VendingMachine\Item\Item;
 use VendingMachine\Item\ItemCode;
 use VendingMachine\Item\ItemCollection;
@@ -17,5 +18,7 @@ final class ItemCollectionTest extends TestCase {
 
         $this->assertSame($collection->get(new ItemCode('A')), $item1);
         $this->assertSame($collection->count(new ItemCode('B')), 2);
+        $this->expectException(ItemNotFoundException::class);
+        $collection->get(new ItemCode('C'));
     }
 }

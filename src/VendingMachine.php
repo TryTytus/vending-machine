@@ -3,6 +3,7 @@
 namespace VendingMachine;
 
 use VendingMachine\Item\Item;
+use VendingMachine\Item\ItemCode;
 use VendingMachine\Item\ItemCodeInterface;
 use VendingMachine\Item\ItemCollection;
 use VendingMachine\Item\ItemInterface;
@@ -12,7 +13,6 @@ use VendingMachine\Money\MoneyInterface;
 
 class VendingMachine implements VendingMachineInterface
 {
-
     public $budget;
     public $items;
 
@@ -29,10 +29,7 @@ class VendingMachine implements VendingMachineInterface
 
     public function dropItem(ItemCodeInterface $itemCode): void
     {
-        $this->items->products = array_filter(
-            $this->items->products,
-            fn (Item $x) => $x->getCode() != $itemCode
-        );
+        $this->items->get($itemCode)->count -= 1;
     }
 
     public function insertMoney(MoneyInterface $money): void
